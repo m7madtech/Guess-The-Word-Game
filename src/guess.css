@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: red;
+}
+
+body {
+    margin: 0;
+    background-color: #ddd;
+}
+
+h1 {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 50px;
+}
+
+.guess-game {
+    width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: space-between;
+
+.game-area {
+    .inputs {
+        > div {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                font-size: 30px;
+                margin-right: 15px;
+                font-weight: bold;
+            }
+
+            input {
+                width: 60px;
+                height: 60px;
+                margin: 0 5px;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+                caret-color: var(--primary-color);
+                border: none;
+                border-bottom: 2px solid black;
+                &:focus {
+                    outline-color:aliceblue;
+                }
+            }
+        }
+        .disabled-input {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+    }
+
+.key-colors {
+    .key-color {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background-color: white;
+        margin-bottom: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+        .key {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            &.inplace {
+                background-color: forestgreen;
+            }
+            &.not-inplace {
+                background-color: gold;
+            }
+            &.wrong {
+                background-color: dimgray;
+            }
+        }
+    }
+}
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+}
